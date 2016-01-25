@@ -11,18 +11,18 @@ $(document).ready(function(){
 		two.update();
 	}
 
-	renderer("def-1", { height: 150 }, function(two , params){
+	/*renderer("def-1", { height: 150 }, function(two , params){
 		var w = params.width;
-		/*Génération des polygones simples*/
+		
 		var rectangle = two.makeRectangle(0, 100, 100, 50); 
 		rectangle.fill = '#FF8000';
 		rectangle.opacity = 0.75;
 
-		/*Génération d'un polygone non simple*/
+		
 		var polygon2 = two.makePath(2*w/3, 0, 2*w/3, 130, (2*w/3 + w)/2, 75, w, 0, w, 125, closed);
 		polygon2.fill = 'rgb(254, 77, 77)';
 		polygon2.opacity = 0.75;
-	});
+	});*/
 
 	renderer("def-orientation", { height: 150 }, function(two, params){
 		
