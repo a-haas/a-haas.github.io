@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Géométrie 3D - Les polygones</title>
+  <!-- Reset CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="styles/reset.css" /> -->
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="lib/font-awesome-4.5.0/css/font-awesome.min.css" />
+  <!-- Main css file -->
+  <link rel="stylesheet" type="text/css" href="styles/geo3D.css" />
+  <script src='lib/jquery/jquery-2.1.4.min.js'></script>
+  <script src="lib/two.js/two.min.js"></script>
+  <script src="scripts/polygones.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Géométrie pour la 3D - Les polygones</h1>
+  </header>
+  <div class="content">
+    <div class="wrapper">
+      <h3>Définition (informelle)</h3>
+      <p> 
+        Un polygone est une région du plan bordée par un ensemble fini de segment formant une courbe fermée simple.
+      </p>
+      <p>
+        <span class="legende simple"></span> : polygone simple
+        <br><span class="legende non-simple"></span> : polygone non simple
+      </p>
+      <div id="def-1" class="dessin">
+        <div class="two-container"></div>
+      </div>
+      <h3>Définition</h3>
+      <p>
+        Soit p<sub>0</sub>, p<sub>1</sub>, ..., p<sub>n-1</sub> une suite de points du plan, ordonée et cyclique (p<sub>n</sub> = p<sub>0</sub>).
+      </p>
+      <p>
+        Soient e<sub>0</sub> = p<sub>0</sub>p<sub>1</sub>, ..., e<sub>i</sub> = p<sub>i</sub>p<sub>i+1</sub>, e<sub>n-1</sub> = p<sub>n-1</sub>p<sub>0</sub>,
+        une suite de segments fermés, incluant les points extrémités.
+        <ul>
+          <li>Ces segments bordent un polygone (région).</li>
+          <li>
+            Ces segments forment un polygone (ses bords) si et seulement si leur trace est une courbe simple. Pour qu'une courbe soit simple :
+            <ol>
+              <li>
+                e<sub>i</sub> &cap; e<sub>i+1</sub> = p<sub>i+1</sub> &forall;i de 0 à n-1.
+                <br>Ces segments sont dits adjacents en un unique point.
+              </li>
+              <li>
+                e<sub>i</sub> &cap; e<sub>i+1</sub> = &empty; &forall;j &ne; i+1.
+                <br>Les segments non adjacents n'ont aucune intersection.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Un polygone possède deux sens d'orentation :
+            <ul>
+              <li>Sens trigonométrique : <i class="fa fa-undo"></i>
+              <li>Sens horaire : <i class="fa fa-repeat"></i></li>
+            </ul>
+            Dans ce cours, la convention sera d'utiliser le sens trigonométrique, aka. sens inverse des aiguilles d'une montre.
+          </li>
+        </ul>
+      </p>
+      <h2>Vocabulaire</h2>
+      <p>
+        Les points p<sub>i</sub> sont appelés sommets. Les segments e<sub>i</sub> sont quand à eux appelés arêtes, côtés ou bien en anglais edges.
+      </p>
+      <h2>Propriétés</h2>
+      <h3>Théorème de Jordan</h3>
+      <p>Une courbe fermée simple du plan le divise en deux composantes, son intérieur et son extérieur.</p>
+
+      <p>Un sommet est dit concave si son angle intérieur est strictement supérieur à &Pi;, alors il est dit convexe.
+        <br>Un polygone est dit convexe si tous ses angles sont convexes. Si au moins un des ses angles est concave alors le polygone est dit concave.</p>
+      <h2>Opérations</h2>
+      <h3>Localisation</h3>
+      <p>
+        Soit P = (p<sub>0</sub>, p<sub>1</sub>, ..., p<sub>n-1</sub>) un polygone. Soit M(x,y) un point. M appartient-il à l'intérieur de P ?
+      </p>
+      <h3>Parcours de tous les points à l'intérieur de P, exemple coloration</h3>
+      <p>parcourir tous les points contenus dans une boîte englobant le polygone (pas très efficace).
+      <!-- Two.js stuff -->
+      </p>
+      <h3>Découpage</h3>
+      <p>
+        Le découpage est utilisé pour afficher une fenêtre (cadre d'une caméra par exemple), ou alors pour cacher des polygones en arrière plan lorsque ceux-ci se croisent, etc...
+        <!-- Two.js stuff-->
+      </p>
+      <h3>Algorithme de balayage</h3>
+      <div class="dessin">
+        <div class="two-container"></div>
+      </div>
+      <h3>Localisation par la méthode des angles</h3>
+      <p>
+        Si la somme des angles est égale à 0 alors le point est à l'extérieur du polygone.
+        <br>Si M &isin; P alors la somme des angles est égale à 2&Pi;
+        <!-- Two.js stuff -->
+      </p>
+      <h3>Localisation à l'aide de la notion d'indice</h3>
+      <p>
+        <h4>Théorème</h4> Soit P un polygone (simple ou non), soit D une droite ne passant pas par un sommet de P alors soit D ne coupe pas P, soit D coupe P en un nombre pair de points q<sub>1</sub>, q<sub>2k</sub> distincts, ordonnés sur D et les segments.
+        <br>]Q<sub>1</sub>, Q<sub>2</sub>[, ..., ]Q<sub>2k-1</sub>, Q<sub>2k</sub>[ sont à l'intérieur de P.
+        <br>]Q<sub>2</sub>, Q<sub>3</sub>[, ..., ]Q<sub>2k</sub>, Q<sub>&infin;</sub>[ sont à l'extérieur de P.
+        <!-- Two.js stuff -->
+      </p>
+      <h3>Définition</h3>
+      <p> 
+        Soit M(x,y) &isin; &#8477;² \ P. On appelle indice de M par rapport à P noté Ip(M) selon une demi-droite &Delta;, issue de M et ne passant pas par un sommet de P, le npmbre d'intersections entre P et D ou nombre de côtés de P coupé par &Delta;.
+        <h4>Théorème</h4> La parité de Ip(M) ne dépend pas du choix de &Delta; et de plus, M &isin; int(P) &lt;=&gt; Ip(M) est impair, M &isin; ext(P) &lt;=&gt; Ip(M) est pair.
+      </p>
+      <h3>Algorithme par test de parité</h3>
+      <p>
+<pre> <u>Hypothèse</u> : 
+  M &isin; P
+  &Delta; droite horizontale vers la droite
+<u>Initialisation</u> : I = 0
+<u>Pour tout</u> côté c <u>de</u> P <u>faire</u>
+  calculer card(c &cap; &Delta;)
+  I = I + card(c &cap; &Delta;)
+<u>fin pour</u>
+<u>Si</u> I impair <u>alors</u>
+  M &isin; int(P)
+<u>sinon</u>
+  M &isin; ext(P)
+</pre>
+          La complexité de cet algorithme est de  &theta;(n).
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
