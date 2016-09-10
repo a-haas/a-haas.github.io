@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="lib/reveal.js/css/theme/black.css">
   <link rel="stylesheet" href="css/presentation-theme.css">
 
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/reveal.js/lib/css/zenburn.css">
+
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -21,8 +24,31 @@
     <div class="slides">
       <section data-markdown>
         <script type="text/template">
-          # typescript
+          # TypeScript
         </script>
+      </section>
+      <section>
+        <h2>TypeScript code</h2>
+        <pre><code class="typescript" data-trim data-noescape>
+// some typescript
+class MyClass {
+  public static myValue: string;
+  constructor(init: string) {
+    this.myValue = init;
+  }
+}
+import fs = require("fs");
+module MyModule {
+  export interface MyInterface extends Other {
+    myProperty: any;
+  }
+}
+declare magicNumber number;
+myArray.forEach(() => { }); // fat arrow syntax
+        </code></pre>
+      </section>
+      <section>
+        Merci de votre attention !
       </section>
     </div>
   </div>

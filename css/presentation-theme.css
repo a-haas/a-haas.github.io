@@ -5,3 +5,19 @@ body {
   background: linear-gradient(#C04848, #480048);
   background-color: linear-gradient(#C04848, #480048); 
 }
+
+/*OVERRIDE UPPERCASE*/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	text-transform: none;
+	font-variant: small-caps;
+}
+
+/*PROGRESS BAR*/
+.reveal .progress span{
+  background: linear-gradient(to right, #92FE9D, #00C9FF); 
+}
