@@ -2,8 +2,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
   color: linear-gradient(#C04848, #480048); 
 }
 body {
-  background: linear-gradient(#C04848, #480048);
-  background-color: linear-gradient(#C04848, #480048); 
+  background: linear-gradient(120deg, #403B4A, #E7E9BB);
+  background-color: linear-gradient(120deg, #C04848, #480048); 
 }
 
 /*OVERRIDE UPPERCASE*/

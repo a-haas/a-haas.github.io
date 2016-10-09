@@ -5,30 +5,81 @@
   <title>Antoine Haas</title>
   <!--Important JS-->
   <script src="https://use.fontawesome.com/a45c512f25.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!--CSS style-->
   <link rel="stylesheet" href="css/style.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <![endif]-->
+  </head>
 
-<body>
-    <div id="nav" class="transparent">
-        <ul>
-            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-            <li><a href="typescript-presentation.html">typescript</a>
-            <li><a href="cahier-des-charges-projet-pro.html">cahier des charges</li>
-        </ul>
+  <body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <section id="banner" class="major">
+        <div class="inner">
+          <header class="major">
+            <h1>Antoine Haas</h1>
+          </header>
+          <div class="content">
+            <p style="text-transform: uppercase;">
+              Ici vous pourrez trouver des ressources, projets ou tout autres choses me concernant.
+            </p>
+            <ul class="actions">
+              <li><a href="https://github.com/a-haas" class="button next scrolly">Let's go to my github</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="one" class="tiles">
+        <article>
+          <span class="image">
+            <img src="pictures/mac-coffee.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h3><a href="typescript-presentation.html" class="link">typescript</a></h3>
+            <p>Présentation de la technologie typescript pour le projet pro du M1 ILC.</p>
+        </article>
+        <article>
+          <span class="image">
+            <img src="pictures/stack-letters.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h3><a href="cahier-des-charges-projet-pro.html" class="link">kids(playground);</a></h3>
+            <p>Le cahier des charges du projet kids(playground);</p>
+          </header>
+        </article>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <p>Based on the jekyll theme : <a href="https://github.com/andrewbanchich/Forty-Jekyll-Theme">Forty</a></p>
+        </div>
+      </footer>
+
     </div>
-    <div id="cover">
-      <!-- Insert pic here -->
-      <img src="">    
-    </div>
-    <div id="content"></div>
-    <!--JS librairies-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
-    <!--JS to put at end-->
-    <script src="js/script.js"></script>
-</body>
+
+      <!-- Scripts -->
+      <script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+      <script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.scrolly.min.js"></script>
+      <script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.scrollex.min.js"></script>
+      <script src="{{ site.url }}{{ site.baseurl }}/assets/js/skel.min.js"></script>
+      <script src="{{ site.url }}{{ site.baseurl }}/assets/js/util.js"></script>
+      <!--[if lte IE 8]><script src="{{ site.url }}{{ site.baseurl }}/assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js"></script>
+
+      </div>
+      <!--JS librairies-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.scrolly.min.js"></script>
+      <script src="js/jquery.scrollex.min.js"></script>
+      <script src="js/skel.min.js"></script>
+      <script src="js/util.js"></script>
+      <!--[if lte IE 8]><script src="{{ site.url }}{{ site.baseurl }}/assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
+      <!--JS to put at end-->
+  </body>
 </html>
