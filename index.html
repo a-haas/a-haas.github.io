@@ -10,6 +10,20 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
+
+    <!-- custom styling for the tiles -->
+    <style>
+      #kidsplayground::before{
+        background-image: linear-gradient(120deg, #AA076B, #61045F);
+      }
+      #typescript::before{
+        background-image: linear-gradient(145deg, #294E80, #152740);
+      }
+      #minduploading::before{
+        background-image: linear-gradient(120deg, #FF512F, #DD2476); 
+      }
+
+    </style>
   </head>
 
   <body>
@@ -33,7 +47,8 @@
       </section>
 
       <section id="one" class="tiles">
-        <article>
+        
+        <article id="typescript">
           <span class="image">
             <img src="pictures/mac-coffee.jpg" alt="" />
           </span>
@@ -41,7 +56,8 @@
             <h3><a href="typescript-presentation.html" class="link">typescript</a></h3>
             <p>Présentation de la technologie typescript pour le projet pro du M1 ILC.</p>
         </article>
-        <article>
+
+        <article id="kidsplayground">
           <span class="image">
             <img src="pictures/stack-letters.jpg" alt="" />
           </span>
@@ -50,6 +66,17 @@
             <p>Le cahier des charges du projet kids(playground);</p>
           </header>
         </article>
+
+        <article id="minduploading">
+          <span class="image">
+            <img src="pictures/mind-uploading.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h3><a href="english-presentation.html" class="link">Mind uploading</a></h3>
+            <p>English presentation about mind uploading.</p>
+          </header>
+        </article>
+
       </section>
 
       <!-- Footer -->
