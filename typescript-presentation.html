@@ -5,10 +5,10 @@
   <title>projet pro</title>
   <link rel="stylesheet" href="lib/reveal.js/css/reveal.css">
   <link rel="stylesheet" href="lib/reveal.js/css/theme/black.css">
-
+ 
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/reveal.js/lib/css/zenburn.css">
-
+ 
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -17,16 +17,16 @@
     link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/reveal.js/css/print/pdf.css' : 'lib/reveal.js/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
-
+ 
   <!--  presentation styling -->
   <style>
     section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-      color: linear-gradient(#C04848, #480048); 
+      color: linear-gradient(#C04848, #480048);
     }
     body {
-      background: linear-gradient(145deg, #294E80, #152740); 
+      background: linear-gradient(145deg, #294E80, #152740);
     }
-
+ 
     /*OVERRIDE UPPERCASE*/
     .reveal h1,
     .reveal h2,
@@ -37,27 +37,107 @@
       text-transform: none;
       font-variant: small-caps;
     }
-
+ 
     /*PROGRESS BAR*/
     .reveal .progress span{
-      background: linear-gradient(to right, #92FE9D, #00C9FF); 
+      background: linear-gradient(to right, #92FE9D, #00C9FF);
     }
   </style>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-      <section data-markdown>
-        <script type="text/template">
+<div class="reveal">
+<div class="slides">
+<section data-markdown>
+<script type="text/template">
 # TypeScript
-*The Javascript superset*
+*Un super-ensemble de Javascript*
 
 Antoine Haas
-        </script>
-      </section>
-      <section>
-        <h2>TypeScript code</h2>
-        <pre><code class="typescript" data-trim data-noescape>
+</script>
+</section>
+
+<!-- presentation node.js et javascript -->
+
+<section data-markdown>
+<script type="text/template">
+## Javascript, depuis 2009, est un langage fullstack en pleine expansion.
+</script>
+</section>
+
+<!-- presentation point fort js -->
+
+<section>
+<h2>Quelques chiffres tirés de github</h2>
+<img src="pictures/git-js-stats.png" />
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## JS est populaire pour sa communauté, sa grande flexibilité et sa facilité d'apprentissage. 
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Le problème de JS est le développement d'applications à grande échelle. 
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Solutions
+* Norme Ecmascript
+* Transpiler (Dart, Coffeescript, Typescript, Babel)
+* Designs patterns spécifiques
+* ...
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Typescript est un super-ensemble de JS à typage statique. 
+
+Le projet est open-source et géré par Microsoft.
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Le typage
+* Typage statique (*number*, *string*, *boolean*, *array*, etc...)
+* Typage dynamique (*any*)
+* Inférence de type
+* Intellisense
+* Analyse de flot
+</script>
+</section>
+
+<section>
+<h2>Le typage</h2>
+<pre><code class="typescript" data-trim data-noescape>
+let i: number = 0; //statique
+i = "0"; // warning lancé par Typescript
+
+var data: any; // dynamique
+
+var data; // TS valide 
+</code></pre>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Ajout d'autres fonctionnalités connues et appréciées par les développeurs en général
+* Programmation orientée objet à classe
+* Interface de programmation
+* Modules et espace de nommage (front-end)
+* Lambda fonction
+* ...
+</script>
+</section>
+
+<section>
+<h2>TypeScript code</h2>
+<pre><code class="typescript" data-trim data-noescape>
 // some typescript
 class MyClass {
   public static myValue: string;
@@ -72,14 +152,67 @@ module MyModule {
   }
 }
 declare magicNumber number;
-myArray.forEach(() => { }); // fat arrow syntax
-        </code></pre>
-      </section>
-      <section>
-        Merci de votre attention !
-      </section>
-    </div>
-  </div>
+myArray.forEach(() => { }); // lambda function
+</code></pre>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## La transition incrémentale au langage permet un temps d'adaptation. 
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Typescript possède son lot de problèmes
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+<blockquote>
+“The data indicates functional languages are better than procedural languages; it suggests that strong typing is better than weak typing; that static typing is better than dynamic; and that managed memory usage is better than unmanaged.”
+
+“While these relationships are statistically significant, the effects are quite small.”
+</blockquote>
+*Baishakhi Ray, Daryl Posnett, Vladimir Filkov, Premkumar T Devanbu*
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Les descripteurs de librairies externes (*.d.ts*) sont très dépendants de la communauté.
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Typescript est difficile à intégrer dans un projet de part son workflow particulier.
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Conclusion
+Typescript est prometteur mais dépendant de l'effervescence autour du projet.
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+<blockquote>
+“Any application that can be written in JavaScript, will eventually be written in JavaScript.”
+</blockquote>
+*Jeff Atwood (2007)*
+</script>
+</section>
+
+<section>
+<h1>Merci de votre attention !</h1>
+</section>
+
+</div>
+</div>
   <script src="lib/reveal.js/lib/js/head.min.js"></script>
   <script src="lib/reveal.js/js/reveal.js"></script>
   <script>
