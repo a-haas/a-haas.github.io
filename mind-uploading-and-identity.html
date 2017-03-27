@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mind uploading and identity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/cayman.css">
+    <link rel="stylesheet" href="css/whitey.css">
+    <!-- some jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+      .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5s{
+        color: black;
+      }
+      .page-header{
+        background: url(pictures/mind-brainstorming.png) no-repeat center center fixed;
+        background-size: cover;  
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Mind uploading and identity</h1>
+      <h3>Summary from Axons and Axioms "Mind uploading and identity" podcast</h3>
+    </section>
+
+    <section class="main-content">
+## Brain and artificial representation
+
+The brain is an organ full of neurons connected between them. This connections are what we call the *neural connectivitiy* or the *brain map*. To be simple, the idea behind mind uploading is to extract the *brain map* that is virtually just a set of connection composed of **inhibition** and **excitation**. The inhbition and excitation are what we call weights in our artificial representation, called **Artificial Neural Network**.  
+
+So the idea is to take this representation and transform the inhibition and excitation into weights. Though it can be looked that way, it is not the truth because from this point of view it is just a hardware change, because you see the brain as a computer. Even though it is correct, this vision isn't complete. As said in the podcast, Andy Clark sees the brain as a collection of sensory inputs, from the entire world. These inputs are the informations required by the brain to fully be functionnal. The sensory inputs are what define someone and are unique for everyone because everyone perceive the world differently.
+
+## Personnality
+
+As said in the previous paragraph, sensory relationship with the world is what define the brain and *de facto* the personnality of a person. What we know about the personnality of a person is not exhaustive and we can't transfer all of it if you don't know what to upload, what to save. If the knowledge is not exhaustive then it implies that you can only do stuff on a set of the personnality. What people are ready to lose while doing mind uploading? What really defines you? No one can really anwer this question because the definition of the **identity** and the personnality isn't clear nor concise nor exhaustive.
+
+## Personnality and artificial representation
+
+Just as a side notes and to explain briefly the difference between the two sides, I'm going to compare them a little bit. 
+
+The idea behind the artificial representation means a mathematical representation of yourself. It sees you as a very specific function. This point of view is more neuroscientific and a lot more about science.
+
+On the other side, the personnality point of view is more a social construction, a perceive of yourself and how the other sees you. It is your social and metaphysical identity. 
+
+These points of view are two side of the same thing, but there are a lot of disjunctions when you try to join the two. 
+
+## Thoughts experiment
+
+### The experiment
+
+We are going to talk about a teleporter. There are a few requirements about it :
+* Procedure : you are vaporised then rebuild at an another place. The same as before but not the same atoms.
+* The machine never break or have disfunctionnement
+
+**The company that owns the teleporter offers you your next vacation, all inclusive, everywhere you want to go. The only thing is to use there teleport. Are you going to use it or not?**
+
+### A bit of twist
+
+Even though you were said before that the machine was 100% safe, it broke during your teleportation. The teleportation went well, and you are in the new place. The only thing that broke was the initial machine and it didn't vaporised you. 
+
+**Which one is the real you?**
+
+### Some thoughts
+
+So to be simple, if only one is you, then whatever, which one is more legitimate to be you. Which one has more rights. If you accept to go through the teleporter it means that you accept that it rebuild the same personnality, the same person as before. So there is no superior you, they are exactly the same, just in two differents locations.
+
+There is also the answer where both of them are you. Even though they might not have the same experience in the near future but they share the same past. If they doesn't have the same experience will they still be the same person, more like twins? If they are still the same comes the question of the identity, because usually identity means one. Is it a new kind of identity? 
+
+Even though the experiment is weird and nearly unlikely for us, it asks some questions you will need to answer in order to accept the mind uploading, and more generally, some philosophical questions about the You, how do you define yourself, your personnality and a lot of other things.
+
+
+    </section>
+    <!-- markdown settings -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
+    <script>
+      /*get md content and convert it into html*/
+      var converter = new showdown.Converter(),
+      text = $(".main-content").html(),
+      html = converter.makeHtml(text);
+      // now replace md content by showdown generated html
+      $(".main-content").html(html);
+    </script>
+  </body>
+</html>
